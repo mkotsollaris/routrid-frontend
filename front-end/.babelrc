@@ -1,0 +1,19 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [["styled-components", { "ssr": true, "preprocess": false }]],
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "next/babel",
+          {
+            "transform-runtime": {
+              "corejs": false
+            }
+          }
+        ]
+      ],
+      "plugins": ["babel-plugin-dynamic-import-node"]
+    }
+  }
+}

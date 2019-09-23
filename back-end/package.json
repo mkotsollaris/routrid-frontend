@@ -1,0 +1,48 @@
+{
+  "name": "backend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dotenv": "^6.2.0",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "lodash.template": "^4.5.0",
+    "morgan": "~1.9.0",
+    "nodemon": "^1.19.2",
+    "pug": "2.0.0-beta11",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-scripts": "2.1.5",
+    "request": "^2.88.0",
+    "trulioo-react": "0.0.3-rc.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "concurrently": "^4.1.0",
+    "mocha": "6.1.4",
+    "superagent": ">=3.7.0"
+  },
+  "scripts": {
+    "start-react-script": "react-scripts start",
+    "start-trulioo-proxy": "nodemon ./src/trulioo-proxy/app/trulioo-proxy",
+    "trulioo-proxy-test": "mocha ./src/trulioo-proxy/test",
+    "start": "npm run start-trulioo-proxy",
+    "build": "react-scripts build",
+    "test": "concurrently --kill-others \"npm run trulioo-proxy-test\" ",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "author": "Menelaos Kotsollaris",
+  "license": "Apache 2"
+}
