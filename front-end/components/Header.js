@@ -1,8 +1,6 @@
 import { Navbar, Nav, Form, Button, Container } from 'react-bootstrap';
 import styled from 'styled-components';
 import Logo from './Logo';
-import StyledNavLink from './StyledNavLink';
-import SignupComponent from './SignupComponent';
 
 const Header = (props) => (
 
