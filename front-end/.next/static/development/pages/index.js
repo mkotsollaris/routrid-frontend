@@ -69,6 +69,44 @@ var StyledButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["defaul
 
 /***/ }),
 
+/***/ "./components/Home.js":
+/*!****************************!*\
+  !*** ./components/Home.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/es/index.js");
+var _jsxFileName = "/Users/mkotsollaris/projects/routrid-frontend/front-end/components/Home.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function Home() {
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, __jsx("iframe", {
+    src: "https://link.tink.com/1.0/pay/?client_id=2362c043b3e0417f9b9597f55a368460&redirect_uri=http://localhost:3000/callback/etransfer&market=SE&locale=en_GB&payment_request_id=5f235720-dab8-11e9-9c9f-7d65a64d4e49",
+    height: '750px',
+    width: '100%',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }));
+}
+
+/***/ }),
+
 /***/ "./components/Logo.js":
 /*!****************************!*\
   !*** ./components/Logo.js ***!
@@ -149,7 +187,7 @@ function Singup(props) {
     },
     __self: this
   }, __jsx(trulioo_react_EmbedID__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    url: "http://localhost:3111",
+    url: "http://localhost:35777",
     handleResponse: handleResponse,
     __source: {
       fileName: _jsxFileName,
@@ -75962,6 +76000,7 @@ var getCountries = function getCountries(url) {
 
               case 4:
                 promise = _context.sent;
+                console.log('promise.data',promise.data)
                 dispatch({
                   type: _types.GET_COUNTRIES,
                   payload: JSON.parse(promise.data.response).sort()
@@ -78565,6 +78604,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _components_Signup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Signup */ "./components/Signup.jsx");
+/* harmony import */ var _components_Home__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Home */ "./components/Home.js");
 
 var _jsxFileName = "/Users/mkotsollaris/projects/routrid-frontend/front-end/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
@@ -78587,62 +78627,58 @@ function _templateObject() {
 
 
 
+
 var GlobalStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_5__["createGlobalStyle"])(_templateObject());
 function Index() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(null),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])("Menelaos"),
       currentUser = _useState[0],
       setCurrentUser = _useState[1];
 
   function handleResponse(e) {
     console.log('@signup successful');
     setCurrentUser('Menelaos');
-  }
+  } // if(currentUser) {
+  //   return <div>
+  //     <Home name={currentUser}/>
+  //   </div>
+  // }
 
-  if (currentUser) {
-    return __jsx("div", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 27
-      },
-      __self: this
-    });
-  }
 
   return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Container"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, __jsx(GlobalStyle, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 35
     },
     __self: this
-  }), __jsx(next_head__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, __jsx(GlobalStyle, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 36
     },
     __self: this
-  }, __jsx("title", {
+  }), __jsx(next_head__WEBPACK_IMPORTED_MODULE_4___default.a, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37
     },
     __self: this
+  }, __jsx("title", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
   }, "routrid")), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 40
     },
     __self: this
   }, __jsx(_components_Signup__WEBPACK_IMPORTED_MODULE_7__["default"], {
     handleResponse: handleResponse,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 41
     },
     __self: this
   })));
@@ -78675,7 +78711,7 @@ function Index() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!*****************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmkotsollaris%2Fprojects%2Froutrid-frontend%2Ffront-end%2Fpages%2Findex.js ***!
   \*****************************************************************************************************************************************************/
@@ -78698,5 +78734,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js","styles"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

@@ -8,6 +8,7 @@ import { createGlobalStyle } from 'styled-components'
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Singup from '../components/Signup';
+import Home from '../components/Home';
 
 const GlobalStyle = createGlobalStyle`
   p {
@@ -16,18 +17,18 @@ const GlobalStyle = createGlobalStyle`
 `
 
 export default function Index() {
-  const [currentUser, setCurrentUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState("Menelaos");
 
   function handleResponse(e) {
     console.log('@signup successful');
     setCurrentUser('Menelaos');
   }
 
-  if(currentUser) {
-    return <div>
-
-    </div>
-  }
+  // if(currentUser) {
+  //   return <div>
+  //     <Home name={currentUser}/>
+  //   </div>
+  // }
   
   return (
 
