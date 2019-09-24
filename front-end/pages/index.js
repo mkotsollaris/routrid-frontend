@@ -8,7 +8,17 @@ import { createGlobalStyle } from 'styled-components'
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Singup from '../components/Signup';
-import Home from '../components/Home';
+
+import dynamic from 'next/dynamic'
+import EmbedID from 'trulioo-react/EmbedID';
+const Graph = dynamic(
+  () => import('../components/Graph'),
+  { ssr: false }
+)
+const Home = dynamic(
+  () => import('../components/Home'),
+  { ssr: false }
+)
 
 const GlobalStyle = createGlobalStyle`
   p {
@@ -20,15 +30,15 @@ export default function Index() {
   const [currentUser, setCurrentUser] = useState("Menelaos");
 
   function handleResponse(e) {
-    console.log('@signup successful');
+    console.log('response',e);
     setCurrentUser('Menelaos');
   }
 
-  // if(currentUser) {
-  //   return <div>
-  //     <Home name={currentUser}/>
-  //   </div>
-  // }
+  if(currentUser) {
+    return <div>
+      <Home name={currentUser}/>
+    </div>
+  }
   
   return (
 
@@ -38,7 +48,7 @@ export default function Index() {
           <title>routrid</title>
       </Head>
         <Row>
-          <Singup handleResponse={handleResponse}></Singup>
+          <Singup handleResponse={handleResponse}/>
         </Row>  
       </Container>
   );

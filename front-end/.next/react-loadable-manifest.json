@@ -1,4 +1,230 @@
 {
+  "../components/Graph": [
+    {
+      "id": "./components/Graph.js",
+      "name": "./components/Graph.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/@braintree/sanitize-url/index.js",
+      "name": "./node_modules/@braintree/sanitize-url/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/dagre-d3-renderer/dist/dagre-d3.core.js",
+      "name": "./node_modules/dagre-d3-renderer/dist/dagre-d3.core.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/dagre-d3-renderer/lib/label/add-html-label.js",
+      "name": "./node_modules/dagre-d3-renderer/lib/label/add-html-label.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/dagre-d3-renderer/lib/util.js",
+      "name": "./node_modules/dagre-d3-renderer/lib/util.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/dagre-layout/dist/dagre-layout.core.js",
+      "name": "./node_modules/dagre-layout/dist/dagre-layout.core.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/escaper/dist/escaper.js",
+      "name": "./node_modules/escaper/dist/escaper.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/graphlibrary/index.js",
+      "name": "./node_modules/graphlibrary/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/graphlibrary/lib/alg/components.js",
+      "name": "./node_modules/graphlibrary/lib/alg/components.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/graphlibrary/lib/alg/dfs.js",
+      "name": "./node_modules/graphlibrary/lib/alg/dfs.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/graphlibrary/lib/alg/dijkstra-all.js",
+      "name": "./node_modules/graphlibrary/lib/alg/dijkstra-all.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/graphlibrary/lib/alg/dijkstra.js",
+      "name": "./node_modules/graphlibrary/lib/alg/dijkstra.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/graphlibrary/lib/alg/find-cycles.js",
+      "name": "./node_modules/graphlibrary/lib/alg/find-cycles.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/graphlibrary/lib/alg/floyd-warshall.js",
+      "name": "./node_modules/graphlibrary/lib/alg/floyd-warshall.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/graphlibrary/lib/alg/index.js",
+      "name": "./node_modules/graphlibrary/lib/alg/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/graphlibrary/lib/alg/is-acyclic.js",
+      "name": "./node_modules/graphlibrary/lib/alg/is-acyclic.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/graphlibrary/lib/alg/postorder.js",
+      "name": "./node_modules/graphlibrary/lib/alg/postorder.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/graphlibrary/lib/alg/preorder.js",
+      "name": "./node_modules/graphlibrary/lib/alg/preorder.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/graphlibrary/lib/alg/prim.js",
+      "name": "./node_modules/graphlibrary/lib/alg/prim.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/graphlibrary/lib/alg/tarjan.js",
+      "name": "./node_modules/graphlibrary/lib/alg/tarjan.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/graphlibrary/lib/alg/topsort.js",
+      "name": "./node_modules/graphlibrary/lib/alg/topsort.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/graphlibrary/lib/data/priority-queue.js",
+      "name": "./node_modules/graphlibrary/lib/data/priority-queue.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/graphlibrary/lib/graph.js",
+      "name": "./node_modules/graphlibrary/lib/graph.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/graphlibrary/lib/json.js",
+      "name": "./node_modules/graphlibrary/lib/json.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/graphlibrary/lib/lodash.js",
+      "name": "./node_modules/graphlibrary/lib/lodash.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/he/he.js",
+      "name": "./node_modules/he/he.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/is-regexp/index.js",
+      "name": "./node_modules/is-regexp/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/jquery/dist/jquery.js",
+      "name": "./node_modules/jquery/dist/jquery.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/lodash/lodash.js",
+      "name": "./node_modules/lodash/lodash.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/mermaid/dist/mermaid.core.js",
+      "name": "./node_modules/mermaid/dist/mermaid.core.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/moment-mini/locale sync recursive ^\\.\\/.*$",
+      "name": "./node_modules/moment-mini/locale sync recursive ^\\.\\/.*$",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/moment-mini/locale/locale.js",
+      "name": "./node_modules/moment-mini/locale/locale.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/moment-mini/moment.min.js",
+      "name": "./node_modules/moment-mini/moment.min.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/scope-css/index.js",
+      "name": "./node_modules/scope-css/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/slugify/slugify.js",
+      "name": "./node_modules/slugify/slugify.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/strip-css-comments/index.js",
+      "name": "./node_modules/strip-css-comments/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "../components/Home": [
+    {
+      "id": "./components/Home.js",
+      "name": "./components/Home.js",
+      "file": "static/chunks/2.js",
+      "publicPath": "static/chunks/2.js"
+    }
+  ],
   "./dev/noop": [
     {
       "id": "./node_modules/next/dist/client/dev/noop.js",
