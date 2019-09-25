@@ -1,11 +1,7 @@
-.text-align-center {
-    /* text-align: center; */
-}
-
 .logo {
     width: 20%;
 }
 
-.proceed-btn{
+.proceed-btn {
     float:right;
 }

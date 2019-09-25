@@ -1,38 +1,39 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import { Navbar, Nav, Form, Button, Container } from 'react-bootstrap';
 import styled from 'styled-components';
-import Logo from './Logo';
 import '../styles/header.css';
-import Singup from './Signup';
+import AppContext from '../context/AppContext';
 
-export default function Header(props) {
-  
-  const [renderSingup, setRenderSignup] = useState(false);
+export default function Header() {
+
+  const appContext = React.useContext(AppContext);
+  const { isLoggedIn } = appContext;
+console.log('isloged',isLoggedIn)
+  const [renderSignup, setRenderSignup] = useState(false);
 
   function logoutClick() {
     setRenderSignup(true);
   }
 
-  if(renderSingup) {
+  if (renderSignup) {
     location.reload();
   }
+  
+  const rightMostMenuItem = isLoggedIn ? <Navbar.Collapse id="basic-navbar-nav">
+    <Nav>
+      <Button variant="light" onClick={() => { logoutClick() }}>Logout</Button>
+      <Form inline>
+        <StyledButton variant="outline-success">Profile</StyledButton>
+      </Form>
+    </Nav>
+  </Navbar.Collapse> : null;
 
   return <Container>
     <Navbar expand="lg">
       <Navbar.Brand className="mr-auto">
         <img src="../static/images/routrid-transparent.png"></img>
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-        </Nav>
-        <Nav>
-          <Button variant="light" onClick={() => { logoutClick() }}>Logout</Button>
-          <Form inline>
-            <StyledButton variant="outline-success">Profile</StyledButton>
-          </Form>
-        </Nav>
-      </Navbar.Collapse>
+      {rightMostMenuItem}
     </Navbar>
   </Container>
 

@@ -1,14 +1,11 @@
-import {useEffect} from 'react';
 import EmbedID from "trulioo-react/EmbedID";
 import '../styles/signup.css';
 import { Row } from 'react-bootstrap';
-import Logo from "./Logo";
-import * as d3 from "d3";
-import "d3";
+import React from 'react';
 
 export default function Singup(props) {
-
-    function handleResponse(e) {        
+    
+    function handleResponse(e) {     
         props.handleResponse(e);
     }
 

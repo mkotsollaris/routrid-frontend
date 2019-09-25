@@ -3,22 +3,20 @@ import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import Header from '../components/Header';
-import  { VerificationProvider } from '../context/VerificationContext';
+import { AppProvider } from '../context/AppContext';
 import Head from 'next/head'
 import { createGlobalStyle } from 'styled-components'
-import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Singup from '../components/Signup';
-import Dropdown from '../components/Dropdown';
-import Transaction from '../components/Transaction';
 import dynamic from 'next/dynamic'
-import EmbedID from 'trulioo-react/EmbedID';
+import Beneficiary from '../components/Beneficiary';
+import TransactionSuccess from '../components/TransactionSuccess';
 const Graph = dynamic(
   () => import('../components/Graph'),
   { ssr: false }
 )
-const Home = dynamic(
-  () => import('../components/Home'),
+const PIS = dynamic(
+  () => import('../components/PIS'),
   { ssr: false }
 )
 
@@ -29,37 +27,65 @@ const GlobalStyle = createGlobalStyle`
 `
 
 export default function Index() {
-  const [currentUser, setCurrentUser] = useState();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [renderSuccess, setOnRenderSuccess] = useState(false);
 
-  function handleResponse(e) {
-    console.log('response', e);
-    setCurrentUser('Menelaos');
+  function onSuccessRouteSelection() {
+    //TODO
+    setOnRenderSuccess(true)
   }
 
-  if (currentUser) {
+  function handleResponse(e) {
+    setIsLoggedIn(true);
+  }
+
+  if(renderSuccess) {
+    return <AppProvider value={{ isLoggedIn, onSuccessRouteSelection }}>
+    <Container>
+      <GlobalStyle />
+      <Row>
+        <Header />
+      </Row>
+      <Head>
+        <title>routrid</title>
+      </Head>
+      <TransactionSuccess/>
+    </Container>
+  </AppProvider>
+  }
+
+  if (isLoggedIn) {
     return <div>
-      <Home name={currentUser} />
+      <AppProvider value={{ isLoggedIn, onSuccessRouteSelection }}>
+        <Container>
+          <GlobalStyle />
+          <Row>
+            <Header />
+          </Row>
+          <Head>
+            <title>routrid</title>
+          </Head>
+          <Beneficiary />
+        </Container>
+      </AppProvider>
+
     </div>
   }
 
-  return <div>
-    <Transaction/>
-  </div>
-
-  // return (
-  //   <VerificationProvider value={{}}>
-  //     <Container>
-  //       <GlobalStyle />
-  //       <Row>
-  //         <Header />
-  //       </Row>
-  //       <Head>
-  //         <title>routrid</title>
-  //       </Head>
-  //       <Row>
-  //         <Singup handleResponse={handleResponse} />
-  //       </Row>
-  //     </Container>
-  //   </VerificationProvider>
-  // );
+  return (
+    <AppProvider value={{ isLoggedIn }}>
+      <Container>
+        <GlobalStyle />
+        <Row>
+          <Header />
+        </Row>
+        <Head>
+          <title>routrid</title>
+        </Head>
+        <Row>
+          <Singup handleResponse={handleResponse} />
+        </Row>
+      </Container>
+    </AppProvider>
+  );
 }
