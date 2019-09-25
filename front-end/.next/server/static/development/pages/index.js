@@ -135,6 +135,7 @@ module.exports =
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Header; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
@@ -142,6 +143,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Logo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Logo */ "./components/Logo.js");
+/* harmony import */ var _styles_header_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/header.css */ "./styles/header.css");
+/* harmony import */ var _styles_header_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_header_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _Signup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Signup */ "./components/Signup.jsx");
 var _jsxFileName = "/Users/mkotsollaris/projects/routrid-frontend/front-end/components/Header.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -149,40 +153,101 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Header = props => __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 7
-  },
-  __self: undefined
-}, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Navbar"], {
-  expand: "lg",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 8
-  },
-  __self: undefined
-}, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Navbar"].Brand, {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 9
-  },
-  __self: undefined
-}, __jsx(_Logo__WEBPACK_IMPORTED_MODULE_3__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 10
-  },
-  __self: undefined
-})), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Navbar"].Toggle, {
-  "aria-controls": "basic-navbar-nav",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 12
-  },
-  __self: undefined
-})));
 
+
+function Header(props) {
+  const {
+    0: renderSingup,
+    1: setRenderSignup
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+
+  function logoutClick() {
+    setRenderSignup(true);
+  }
+
+  if (renderSingup) {
+    location.reload();
+  }
+
+  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Navbar"], {
+    expand: "lg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Navbar"].Brand, {
+    className: "mr-auto",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, __jsx(_Logo__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Navbar"].Toggle, {
+    "aria-controls": "basic-navbar-nav",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Navbar"].Collapse, {
+    id: "basic-navbar-nav",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Nav"], {
+    className: "mr-auto",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Nav"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+    variant: "light",
+    onClick: () => {
+      logoutClick();
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, "Logout"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Form"], {
+    inline: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }, __jsx(StyledButton, {
+    variant: "outline-success",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }, "Profile"))))));
+}
 const StyledForm = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Form"]).withConfig({
   displayName: "Header__StyledForm",
   componentId: "sc-1d4dlu-0"
@@ -190,8 +255,7 @@ const StyledForm = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(reac
 const StyledButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Button"]).withConfig({
   displayName: "Header__StyledButton",
   componentId: "sc-1d4dlu-1"
-})(["&&&{background-color:#ECCA6B;border-color:#ECCA6B;color:white;};", ":hover &&&{background-color:white;color:#A940A2;}"], StyledForm);
-/* harmony default export */ __webpack_exports__["default"] = (Header);
+})(["&&&{background-color:#ECCA6B;border-color:#ECCA6B;color:white;margin-right:.5rem;};", ":hover &&&{background-color:white;color:#A940A2;}"], StyledForm);
 
 /***/ }),
 
@@ -210,7 +274,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.a.withConfig({
   displayName: "Logo",
   componentId: "sc-73xt4l-0"
-})(["background-image:url('/static/images/stay_logo.svg');background-size:contain;background-repeat:no-repeat;padding:25px 50px;background-position:left;margin-left:5px;"]));
+})(["background-image:url('/static/images/routrid-transparent.png');background-size:contain;background-repeat:no-repeat;padding:25px 50px;background-position:left;margin-left:5px;"]));
 
 /***/ }),
 
@@ -343,14 +407,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Graph = next_dynamic__WEBPACK_IMPORTED_MODULE_7___default()(() => __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ../components/Graph */ "./components/Graph.js")), {
+const Graph = next_dynamic__WEBPACK_IMPORTED_MODULE_7___default()(() => __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ../components/Graph */ "./components/Graph.js")), {
   ssr: false,
   loadableGenerated: {
     webpack: () => [/*require.resolve*/(/*! ../components/Graph */ "./components/Graph.js")],
     modules: ['../components/Graph']
   }
 });
-const Home = next_dynamic__WEBPACK_IMPORTED_MODULE_7___default()(() => __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ../components/Home */ "./components/Home.js")), {
+const Home = next_dynamic__WEBPACK_IMPORTED_MODULE_7___default()(() => __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ../components/Home */ "./components/Home.js")), {
   ssr: false,
   loadableGenerated: {
     webpack: () => [/*require.resolve*/(/*! ../components/Home */ "./components/Home.js")],
@@ -454,6 +518,17 @@ function Index() {
 //     background-position: center;  
 //     margin-top: -14%;
 //   `;
+
+/***/ }),
+
+/***/ "./styles/header.css":
+/*!***************************!*\
+  !*** ./styles/header.css ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
 
 /***/ }),
 

@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
   p {
     font-family: "Roboto Light ,Times New Roman", Times, serif;
   }
-`
+` 
 
 export default function Index() {
   const [currentUser, setCurrentUser] = useState("Menelaos");
