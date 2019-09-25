@@ -126,6 +126,75 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/Dropdown.js":
+/*!********************************!*\
+  !*** ./components/Dropdown.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Dropdown; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/mkotsollaris/projects/routrid-frontend/front-end/components/Dropdown.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+function Dropdown(props) {
+  const {
+    0: selectedValue,
+    1: setSelectedValue
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("Price");
+  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Dropdown"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Dropdown"].Toggle, {
+    id: "dropdown-basic",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, selectedValue), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Dropdown"].Menu, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Dropdown"].Item, {
+    onClick: () => setSelectedValue("Price"),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, "Price"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Dropdown"].Item, {
+    onClick: () => setSelectedValue("Time"),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, "Time"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Dropdown"].Item, {
+    onClick: () => setSelectedValue("Downtime"),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, "Downtime")));
+}
+
+/***/ }),
+
 /***/ "./components/Header.js":
 /*!******************************!*\
   !*** ./components/Header.js ***!
@@ -189,7 +258,8 @@ function Header(props) {
       lineNumber: 22
     },
     __self: this
-  }, __jsx(_Logo__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, __jsx("img", {
+    src: "../static/images/routrid-transparent.png",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
@@ -320,29 +390,23 @@ function Singup(props) {
       lineNumber: 15
     },
     __self: this
-  }, __jsx(_Logo__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], {
+    className: "justify-content-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
     },
     __self: this
-  }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], {
-    className: "justify-content-center",
+  }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
     },
     __self: this
-  }, __jsx("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
   }, "Create Account")), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 19
     },
     __self: this
   }, __jsx(trulioo_react_EmbedID__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -350,11 +414,67 @@ function Singup(props) {
     handleResponse: handleResponse,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 20
     },
     __self: this
   })));
 }
+
+/***/ }),
+
+/***/ "./components/Transaction.js":
+/*!***********************************!*\
+  !*** ./components/Transaction.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Transaction; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Dropdown */ "./components/Dropdown.js");
+var _jsxFileName = "/Users/mkotsollaris/projects/routrid-frontend/front-end/components/Transaction.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function Transaction(props) {
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: this
+  }, "Route Preference: ", __jsx(_Dropdown__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }));
+}
+
+/***/ }),
+
+/***/ "./context/VerificationContext.js":
+/*!****************************************!*\
+  !*** ./context/VerificationContext.js ***!
+  \****************************************/
+/*! exports provided: VerificationProvider, VerificationConsumer, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VerificationProvider", function() { return VerificationProvider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VerificationConsumer", function() { return VerificationConsumer; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+const VerificationContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext({});
+const VerificationProvider = VerificationContext.Provider;
+const VerificationConsumer = VerificationContext.Consumer;
+/* harmony default export */ __webpack_exports__["default"] = (VerificationContext);
 
 /***/ }),
 
@@ -384,17 +504,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Header */ "./components/Header.js");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
-/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_Signup__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Signup */ "./components/Signup.jsx");
-/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/dynamic */ "next/dynamic");
-/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var trulioo_react_EmbedID__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! trulioo-react/EmbedID */ "trulioo-react/EmbedID");
-/* harmony import */ var trulioo_react_EmbedID__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(trulioo_react_EmbedID__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _context_VerificationContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../context/VerificationContext */ "./context/VerificationContext.js");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_Signup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Signup */ "./components/Signup.jsx");
+/* harmony import */ var _components_Dropdown__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Dropdown */ "./components/Dropdown.js");
+/* harmony import */ var _components_Transaction__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Transaction */ "./components/Transaction.js");
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! next/dynamic */ "next/dynamic");
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var trulioo_react_EmbedID__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! trulioo-react/EmbedID */ "trulioo-react/EmbedID");
+/* harmony import */ var trulioo_react_EmbedID__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(trulioo_react_EmbedID__WEBPACK_IMPORTED_MODULE_11__);
 var _jsxFileName = "/Users/mkotsollaris/projects/routrid-frontend/front-end/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -407,21 +530,24 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Graph = next_dynamic__WEBPACK_IMPORTED_MODULE_7___default()(() => __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ../components/Graph */ "./components/Graph.js")), {
+
+
+
+const Graph = next_dynamic__WEBPACK_IMPORTED_MODULE_10___default()(() => __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ../components/Graph */ "./components/Graph.js")), {
   ssr: false,
   loadableGenerated: {
     webpack: () => [/*require.resolve*/(/*! ../components/Graph */ "./components/Graph.js")],
     modules: ['../components/Graph']
   }
 });
-const Home = next_dynamic__WEBPACK_IMPORTED_MODULE_7___default()(() => __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ../components/Home */ "./components/Home.js")), {
+const Home = next_dynamic__WEBPACK_IMPORTED_MODULE_10___default()(() => __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ../components/Home */ "./components/Home.js")), {
   ssr: false,
   loadableGenerated: {
     webpack: () => [/*require.resolve*/(/*! ../components/Home */ "./components/Home.js")],
     modules: ['../components/Home']
   }
 });
-const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_4__["createGlobalStyle"]`
+const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_5__["createGlobalStyle"]`
   p {
     font-family: "Roboto Light ,Times New Roman", Times, serif;
   }
@@ -430,7 +556,7 @@ function Index() {
   const {
     0: currentUser,
     1: setCurrentUser
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("Menelaos");
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])();
 
   function handleResponse(e) {
     console.log('response', e);
@@ -441,83 +567,48 @@ function Index() {
     return __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 40
       },
       __self: this
     }, __jsx(Home, {
       name: currentUser,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 41
       },
       __self: this
     }));
   }
 
-  return __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
+  return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 45
     },
     __self: this
-  }, __jsx(GlobalStyle, {
+  }, __jsx(_components_Transaction__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 46
     },
     __self: this
-  }), __jsx(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47
-    },
-    __self: this
-  }, __jsx("title", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 48
-    },
-    __self: this
-  }, "routrid")), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 50
-    },
-    __self: this
-  }, __jsx(_components_Signup__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    handleResponse: handleResponse,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 51
-    },
-    __self: this
-  })));
-} // const FirstRow = styled(Row)`
-//     background-image: url('/static/images/hompage_image_one.svg');
-//     background-size: cover;
-//     background-repeat: no-repeat;
-//     padding-bottom: 24%;
-//     padding-right: 0;
-//   `;
-//   const BottomRowTitle = styled(Row)`
-//     background-color: #ECECFA;
-//   `;
-//   const FeaturedSpacesTitle = styled.p`
-//     color: #A940A2;
-//     font-size: 2rem;
-//     text-align: center;
-//     margin-top: -50%
-//   `;
-//   const BottomRow = styled(Row)`
-//     background-color: #ECECFA;
-//   `;
-//   const FeaturedSpaces = styled.p`
-//     background-image: url('/static/images/rooms.svg');
-//     background-repeat: no-repeat;
-//     padding: 15%;
-//     background-position: center;  
-//     margin-top: -14%;
-//   `;
+  })); // return (
+  //   <VerificationProvider value={{}}>
+  //     <Container>
+  //       <GlobalStyle />
+  //       <Row>
+  //         <Header />
+  //       </Row>
+  //       <Head>
+  //         <title>routrid</title>
+  //       </Head>
+  //       <Row>
+  //         <Singup handleResponse={handleResponse} />
+  //       </Row>
+  //     </Container>
+  //   </VerificationProvider>
+  // );
+}
 
 /***/ }),
 

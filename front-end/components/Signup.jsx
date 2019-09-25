@@ -13,7 +13,6 @@ export default function Singup(props) {
     }
 
     return <div>
-        <Logo/>
         <Row className="justify-content-center">
             <h1>Create Account</h1>  
         </Row>

@@ -20,7 +20,7 @@ export default function Header(props) {
   return <Container>
     <Navbar expand="lg">
       <Navbar.Brand className="mr-auto">
-        <Logo />
+        <img src="../static/images/routrid-transparent.png"></img>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

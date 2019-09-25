@@ -1,6 +1,10 @@
 .navbar-nav {
     flex-direction: row-reverse !important;
 }
+
+img {
+    width: 25%;
+}
 div {
     width: 100%;
 }
@@ -21,6 +25,10 @@ div {
 
 .logo {
     width: 20%;
+}
+
+.proceed-btn{
+    float:right;
 }
 
 /*# sourceMappingURL=styles.chunk.css.map*/
